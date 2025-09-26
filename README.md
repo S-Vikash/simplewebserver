@@ -40,37 +40,60 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
-<table border="5" cellpadding="20" >
+<html>
+    <head>
+        <title>Simple Webserver</title>
+    </head>
+
+    <body>
+        <table border="5" cellpadding="20" align="center" bgcolor="bisque">
             
-    <th bgcolor="Pink">
-        S.no
-    </th>
-    <th bgcolor="Cyan">
-        Ram
-    </th>
-    <th bgcolor="brown">
-        VRam
-    </th>
 
-    <tr>
-        <td>1</td>
-        <td>16</td>
-        <td>4</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>24</td>
-        <td>8</td>
-    </tr>
-
-    <tr>
-        <td>3</td>
-        <td>32</td>
-        <td>12</td>
-    </tr>
+            <h3 align="center">Device Specifications</h3>
+            <th bgcolor="Pink" align="center">
+                S.no
+            </th>
             
-</table>
+            <th bgcolor="brown" align="center">
+                Device Specifications (Vikash S  25012066)
+            </th>
+            <th bgcolor="cyan" align="center">
+                Type
+            </th>
+            
+            <tr align="center">
+                <td>1</td>
+                <td>RAM</td>
+                <td>24GB</td>
+            </tr>
+
+            <tr align="center">
+                <td>2</td>
+                <td>VRAM</td>
+                <td>8GB</td>
+            </tr>
+
+            <tr align="center">
+                <td>3</td>
+                <td>CPU Cores</td>
+                <td>4 Cores</td>
+            </tr>
+
+            <tr align="center">
+                <td>4</td>
+                <td>SSD</td>
+                <td>512 GB SSD</td>
+            </tr>
+            
+            <tr align="center">
+                <td>5</td>
+                <td>Refresh Rate</td>
+                <td>144Hz</td>
+            </tr>
+                    
+        </table>
+    </body>
+</html>
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -87,8 +110,8 @@ httpd.serve_forever()
 
 
 ## OUTPUT:
-![alt text](<Screenshot 2025-09-16 144804.png>)
-![alt text](<Screenshot 2025-09-16 144643.png>)
+![alt text](image.png)
+![alt text](image-1.png)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
